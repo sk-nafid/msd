@@ -1,0 +1,110 @@
+
+ <?php
+include 'header.php';
+?>
+
+   <style>
+    .bdy {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .hero {
+      background-image: url('img/slider2.jpg'); /* Replace with your actual image path */
+      background-size: cover;
+      background-position: center;
+      height: 350px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.4); /* dark transparent overlay for readability */
+    }
+
+    .hero-content {
+      position: relative;
+      max-width: 900px;
+      padding: 20px;
+      text-align: left;
+      z-index: 1;
+    }
+
+    .hero-content h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .hero-content p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .read-more-btn {
+      background-color: #1e60f3;
+      color: white;
+      margin-top: -13px;
+      border: none;
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 50px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .read-more-btn:hover {
+      background-color: #0047c0;
+    }
+
+    .read-more-btn span {
+      display: inline-block;
+      background: white;
+      color: #1e60f3;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 10px;
+      font-size: 1rem;
+    }
+  </style>
+
+
+  <div class="bdy">
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Darjeeling Tour Packages</h1>
+      <p>
+        Darjeeling is known for being one of the most stunning mountain towns. This wonderful destination draws people because of its natural beauty and humid climate. Darjeeling is one of India's most popular tourist destinations due to its vibrant scenery, tea plantations, year-round weather, and hills.
+      </p>
+      <button class="read-more-btn">
+        Read More <span>&rarr;</span>
+      </button>
+    </div>
+  </section>
+  </div>
+
+
+
+
+  <br><br><br><br>
+<?php
+include 'footer.php';
+?>
+
+

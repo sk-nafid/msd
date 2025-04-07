@@ -1,0 +1,391 @@
+.dropdown-menu .dropdown-menu {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.dropdown-menu .dropdown-item {
+    position: relative;
+}
+
+.dropdown-menu .dropdown-item .dropdown-toggle::after {
+    transform: rotate(-90deg);
+}
+
+/* Slider control buttons */
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 40px;
+    height: 40px;
+    background-color: #2e2e2e;
+    /* Off-white background */
+    border-radius: 50%;
+    /* Rounded button */
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    /* Center vertically */
+    transform: translateY(-50%);
+    /* Adjust for perfect centering */
+}
+
+/* Right arrow position */
+
+.carousel-control-next {
+    right: 10px;
+    /* Adjust position from right */
+}
+
+/* Left arrow position */
+
+.carousel-control-prev {
+    left: 10px;
+    /* Adjust position from left */
+}
+
+/* Hover effect */
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: #e0e0e0;
+    /* Hover effect */
+}
+
+/* Slider Heading */
+
+.slideHead {
+    font-size: 4rem;
+    /* Default font size */
+    font-weight: bold;
+    line-height: 1.3;
+    color: #dfd1bc;
+    font-family: revert;
+}
+
+/* Responsive Heading */
+
+@media (max-width: 768px) {
+    .slideHead {
+        font-size: 2rem;
+        /* Smaller font size on mobile */
+    }
+}
+
+/* Slider Paragraph */
+
+.carousel-caption p {
+    font-size: 1.25rem;
+    /* Default font size for the paragraph */
+    font-weight: 500;
+}
+
+/* Responsive Paragraph */
+
+@media (max-width: 768px) {
+    .carousel-caption p {
+        font-size: 1rem;
+        /* Smaller font size on mobile */
+    }
+}
+
+/* Image Height */
+
+img.slide-height {
+    height: 400px;
+    object-fit: cover;
+}
+
+.container .p-4 {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1) !important;
+    /* Default shadow */
+    transition: box-shadow 5s ease-in-out !important;
+    /* Animate shadow over 5 seconds */
+}
+
+/* Add orange shadow on hover or interaction */
+
+.container .p-4.active {
+    box-shadow: 0 4px 10px rgba(255, 165, 0, 0.6) !important;
+    /* Orange shadow */
+}
+
+.card-img-top {
+    height: 240px;
+    width: 350;
+    object-fit: cover;
+}
+
+.box-grid {
+    height: 408px !important;
+    width: 345px !important;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+/* Styles for "Why Choose Us" section cards */
+
+#why-choose-us .card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 8px 20px rgba(0, 0, 0, 0);
+    /* Add shadow to new cards */
+}
+
+#why-choose-us .card .card-img-top {
+    height: 80px;
+    /* Adjust image size for this section */
+    width: 80px;
+    object-fit: cover;
+}
+
+#why-choose-us .card .card-body {
+    text-align: center;
+}
+
+#why-choose-us .card .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+}
+
+#why-choose-us .card .card-text {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Specific styling for smaller screens */
+
+@media (max-width: 768px) {
+    #why-choose-us .card {
+        margin-bottom: 20px;
+        /* Add some spacing between the cards on mobile */
+    }
+}
+
+/* Add hover effect to the new cards */
+
+#why-choose-us .card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    /* Enhanced shadow on hover */
+    transform: translateY(-5px);
+    /* Slight lift effect */
+    transition: all 0.3s ease-in-out;
+    /* Smooth hover transition */
+    background-color: rgba(255, 166, 0, 0.438);
+}
+
+.nav-item a:hover {
+    color: #04502a;
+    font-weight: bold;
+    font-family: revert;
+}
+
+.bg-light {
+    background-color: #89a1ff    !important;
+}
+.bg-light-footer {
+    background-color: #89a1ff  !important;
+}
+
+.section-h1 {
+    text-align: center;
+}
+
+.destination {
+    height: 440px;
+    width: 360px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.tour {
+    text-align: center;
+    color: #51677a;
+}
+
+.parentContainer {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.top-left {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+}
+
+.overlay {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
+    padding: 10px;
+    border-radius: 5px;
+    width: 80%;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.description {
+    font-size: 14px;
+}
+
+.owl-carousel .item {
+    margin: 0 10px;
+    /* Adjust this value for spacing */
+}
+
+.card-text-item {
+    font-size: medium;
+    color: #000;
+    font-weight: bold;
+}
+
+.car-item {
+    float: right;
+    margin-top: 15px;
+    border-radius: 5px;
+    font-family: inherit;
+    text-transform: none;
+}
+
+.car {
+    font-size: smaller;
+    font-family: serif;
+    color: #586168;
+}
+
+.car-details {
+    padding-left: 12px;
+    padding-top: 6px;
+    font-family: none;
+    font-size: medium;
+    color: #666058;
+}
+
+.ac {
+    font-family: system-ui;
+    font-size: large;
+    font-weight: bold;
+    color: #21215c;
+}
+
+.luggage {
+    margin-top: -40px;
+    /* margin-right: -48px; */
+    margin-left: 148px;
+    color: #191980;
+}
+
+.person {
+    color: #191980;
+}
+
+.pic {
+    color: #0b2750;
+    font-weight: bold;
+}
+
+.phone {
+    color: #6f747c;
+    font-family: none;
+    font-size: medium;
+}
+
+    /* Custom CSS to make dropdown menu hoverable */
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      z-index: 1000;
+    }
+
+
+
+/*custom dropdown*/
+
+.options {
+      display: none;
+      margin-top: 10px;
+    }
+
+    /* Active nav item styles */
+    .active-nav {
+      color: #0d6efd !important; /* Change text color to blue */
+      border-bottom: 2px solid #0d6efd !important; /* Add a bottom border */
+    }
+
+    /* Default nav item color */
+    .nav-link {
+      color: #000; /* Default text color */
+    }
+
+    /* Hover effect for nav items */
+    .nav-link:hover {
+      color: #0d6efd !important; /* Hover color */
+    }
+
+    /*qnt*/
+
+    .qnt{
+        border: solid white;
+    border-radius: 10px;
+    width: 196px;
+    height: 37px;
+    margin-top: 1px;
+    background-color: white;
+    text-align: center;
+    align-content: center;
+    }
+
+    .quantity-input {
+      display: flex;
+      align-items: center;
+    }
+    .quantity-input input {
+      text-align: center;
+      width: 60px;
+    }
+    .quantity-input button {
+        padding: 0.5rem;
+        border-radius: 23px;
+        height: 41px;
+        margin-left: 6px;
+    }
+     .quantity-input {
+      display: flex;
+      align-items: center;
+    }
+    .quantity-input input {
+      text-align: center;
+      width: 30px;
+      margin-left: 15px;
+      border: none;
+    }
+    .quantity-input button {
+      padding: 0.5rem;
+    }
+
+    .custbtn{
+        border: none;
+    
+    }
+    .foo{
+        font-weight: bold;
+    color: white;
+    }
