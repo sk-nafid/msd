@@ -16,49 +16,22 @@ include 'header.php';
       text-shadow: 0 2px 4px rgba(0,0,0,0.7);
     }
 
-    /*temporary*/
-
-    .maintenance-container {
-      background: #fff;
-      padding: 40px 30px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      max-width: 480px;
-      width: 100%;
-          margin-left: 40%;
-    margin-top: 4%;
+    .choose-icon {
+      height: 80px;
+      object-fit: contain;
+      margin-bottom: 15px;
     }
-
-    h1 {
-      font-size: 28px;
-      margin-bottom: 10px;
-      color: #222;
+    .choose-item {
+      text-align: center;
+      padding: 20px;
     }
-
-    p {
-      color: #555;
-      margin-bottom: 30px;
-    }
-
-    .btn {
-      background-color: #0d6efd;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 6px;
-      text-decoration: none;
+    .choose-title {
       font-weight: 600;
-      transition: background-color 0.3s;
+      margin-bottom: 10px;
     }
-
-    .btn:hover {
-      background-color: #084fc7;
-    }
-
-    .maintenance-icon {
-      font-size: 48px;
-      margin-bottom: 20px;
-      color: #f39c12;
+    .choose-text {
+      color: #555;
+      font-size: 15px;
     }
 
      
@@ -69,14 +42,42 @@ include 'header.php';
     About Us
     
   </div>
+<br><br>
+  <div class="container text-center">
+  <h2 class="fw-bold mb-3">Why Choose Us</h2>
+  <p class="text-muted mb-5">
+    It makes a huge difference when you plan your trip with one of our knowledgeable travel advisers,
+    who will help you have memorable and pleasant vacations...
+  </p>
 
-  <div class="maintenance-container">
-  <div class="maintenance-icon">🔧</div>
-  <h1>We’re Under Maintenance</h1>
-  <p>Our website is currently undergoing scheduled maintenance.<br>Please check back soon.</p>
-  <a href="index.php" class="btn">Go Back to Homepage</a>
+  <div class="row g-4 justify-content-center">
+    <div class="col-12 col-md-6 col-lg-3 choose-item">
+      <img src="https://img.icons8.com/color/96/guarantee.png" alt="Price Guarantee" class="choose-icon">
+      <div class="choose-title">Honest Prices Guarantee</div>
+      <div class="choose-text">All of the inclusions and exclusions are clearly listed in our tour pricing. Everything in business is negotiable Except Quality.</div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-3 choose-item">
+      <img src="https://img.icons8.com/color/96/conference-call.png" alt="Reliable Partners" class="choose-icon">
+      <div class="choose-title">Reliable Partners</div>
+      <div class="choose-text">We only collaborate with the top hotels, drivers and other service providers who have established their professionalism through time.</div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-3 choose-item">
+      <img src="https://img.icons8.com/color/96/map-marker--v1.png" alt="Itinerary" class="choose-icon">
+      <div class="choose-title">Tailor-Made Itinerary</div>
+      <div class="choose-text">Your choices & your budget. We are pleased to create a unique itinerary tailored to your needs and preferences.</div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-3 choose-item">
+      <img src="https://img.icons8.com/color/96/online-support.png" alt="Support" class="choose-icon">
+      <div class="choose-title">Full Support 24/7</div>
+      <div class="choose-text">Starting with tour selection to travel essentials. We ensure a relaxing, enjoyable, hassle-free vacation for you.</div>
+    </div>
+  </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   
   
 
