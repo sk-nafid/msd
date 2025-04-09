@@ -189,14 +189,13 @@ Near Metro Heart Hospital Noida</p>
 
 <div style="border-top: solid white; border-bottom: solid white;">
     <br>
-    <div class="container ">
+    <div class="container">
   <div class="row">
-    <div class="col-md-2"> <a href="privacypolicy.php" type="button" class="btn btn-outline-dark custbtn foo">Privacy Policy</a></div>
-    <div class="col-md-2"> <a href="termsof.php" type="button" class="btn btn-outline-dark custbtn foo">Terms of</a> </div>
-    <div class="col-md-2"> <a href="service.php" type="button" class="btn btn-outline-dark custbtn foo">Service</a> </div>
-    <div class="col-md-2"> <a href="cancellationpolicy.php" type="button" class="btn btn-outline-dark custbtn foo">Cancellation Policy</a></div>
-    <div class="col-md-2"> <a href="refundpolicy.php" type="button" class="btn btn-outline-dark custbtn foo">Refund Policy</a></div>
-    <div class="col-md-2"> <a href="contactus.php" type="button" class="btn btn-outline-dark custbtn foo">Contact us</a></div>
+    <div class="col-md"> <a href="privacypolicy.php" type="button" class="btn btn-outline-dark custbtn foo">Privacy Policy</a></div>
+    <div class="col-md"> <a href="termsof.php" type="button" class="btn btn-outline-dark custbtn foo">Terms of Service</a> </div>
+    <div class="col-md"> <a href="cancellationpolicy.php" type="button" class="btn btn-outline-dark custbtn foo">Cancellation Policy</a></div>
+    <div class="col-md"> <a href="refundpolicy.php" type="button" class="btn btn-outline-dark custbtn foo">Refund Policy</a></div>
+    <div class="col-md"> <a href="contactus.php" type="button" class="btn btn-outline-dark custbtn foo">Contact us</a></div>
   </div>
 </div>
 <br>
