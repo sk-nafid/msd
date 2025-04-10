@@ -266,7 +266,58 @@ include 'header.php';
   </div>
 </section>
 
+
+<section class="about-section">
+  <div class="container">
+    <div class="row align-items-center g-4">
+
+     <!-- Image Column -->
+     <div class="col-lg-6">
+        <img src="https://trekthehimalayas.com/images/MeraPeakExpedition/MobileSlider/5d8d53f8-5544-4902-8029-b126291fdfd0_Mera-Peak.webp" alt="Travelers" class="about-img">
+      </div>
+      
+      <!-- Text Column -->
+      <div class="col-lg-6">
+        <h3 class="about-title">About Help The Tourists</h3>
+        <p class="about-subtitle">Bringing you closer to the beauty of Darjeeling, Sikkim, and Dooars.</p>
+        <p class="about-text">
+          At Help The Tourists, we specialize in crafting tailor-made travel experiences that showcase
+          the unparalleled beauty and rich culture of Sikkim, Darjeeling and Dooars. With over a
+          decade of experience in the travel industry, we are your trusted guides to uncovering the
+          hidden gems of these breathtaking regions.
+        </p>
+        <p class="about-text">
+          Our team of local experts and tour planners possess an intimate knowledge of the
+          destinations we offer tours for, guaranteeing an authentic and immersive experience. From
+          the rolling tea gardens of Darjeeling to the snow-capped peaks of Khangchendzonga and the
+          serene beauty of Dooars, we’ll take you on a journey that promises to leave a lasting
+          impression.
+        </p>
+        <p class="about-text">
+          We offer a wide range of tours, catering to every type of traveler. Whether you seek
+          adventure, culture, or spirituality, our tour packages have something for everyone. From
+          visiting the famous tourist attractions to uncovering off-beat destinations, we’ll take you on a
+          journey of discovery.
+        </p>
+        <p class="about-text">
+          At Help The Tourists, we are committed to sustainable tourism and take great care to
+          minimize our impact on the environment and local communities. We work closely with local
+          partners to ensure that our tours support the local economy and promote conservation.
+        </p>
+        <p class="about-text">
+          Join us on an unforgettable journey to the hidden gems of Sikkim, Darjeeling and Dooars.
+          Contact us today to customize your perfect travel experience with Help The Tourists.
+        </p>
+      </div>
+
+     
+
+    </div>
+  </div>
+</section>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   
   
 
