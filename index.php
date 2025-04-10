@@ -5,7 +5,8 @@ include 'header.php';
 <style>
     
 
-    .search-form {
+   /* Basic styles */
+   .search-form {
       display: flex;
       gap: 20px;
       padding: 20px;
@@ -14,7 +15,7 @@ include 'header.php';
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
       align-items: center;
       flex-wrap: nowrap; /* Ensures everything stays on one row */
-      max-width: 1000px;
+      max-width: 850px;
       margin: auto;
     }
 
@@ -77,6 +78,7 @@ include 'header.php';
       font-size: 16px;
       cursor: pointer;
       border-radius: 4px;
+      width: 33px;
     }
 
     .search-btn {
@@ -90,6 +92,48 @@ include 'header.php';
 
     .search-btn:hover {
       background: #1f3aa0;
+    }
+
+    /* Media Queries for Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .search-form {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+      }
+
+      .field {
+        width: 100%; /* Make each field take full width */
+      }
+
+      .guest-dropdown {
+        width: 100%; /* Full width on mobile */
+      }
+
+      .search-btn {
+        width: 100%; /* Make search button full width on mobile */
+      }
+    }
+
+    /* Media Queries for very small screens */
+    @media (max-width: 480px) {
+      .field label {
+        font-size: 12px; /* Smaller label text */
+      }
+
+      input, .guest-input, .search-btn {
+        padding: 8px 12px; /* Smaller padding for mobile */
+        font-size: 12px; /* Smaller font size */
+      }
+
+      .guest-dropdown {
+        width: 100%; /* Full width on smaller devices */
+        max-width: 320px; /* Limit max width */
+      }
+
+      .guest-input {
+        font-size: 12px; /* Smaller text */
+      }
     }
   </style>
 
@@ -141,7 +185,7 @@ include 'header.php';
     <!-- Search Section -->
 
 
-    <div class="search-form">
+    <div class="search-form" style="background-color: #89a1ff; container">
     <div class="field">
       <label>Destination</label>
       <input type="text" placeholder="Where are you going?" />
@@ -162,15 +206,15 @@ include 'header.php';
         <div class="guest-dropdown" id="guestDropdown">
           <div class="row">
             <span>Adults</span>
-            <button onclick="updateGuests('adults', -1)">−</button>
+            <button onclick="updateGuests('adults', -1)" style="margin-left: 15px;"   class="btn btn-outline-primary">−</button>
             <span id="adultCount">0</span>
-            <button onclick="updateGuests('adults', 1)">+</button>
+            <button onclick="updateGuests('adults', 1)"  class="btn btn-outline-primary">+</button>
           </div>
           <div class="row">
             <span>Children</span>
-            <button onclick="updateGuests('children', -1)">−</button>
+            <button onclick="updateGuests('children', -1)"  class="btn btn-outline-primary">−</button>
             <span id="childCount">0</span>
-            <button onclick="updateGuests('children', 1)">+</button>
+            <button onclick="updateGuests('children', 1)"  class="btn btn-outline-primary">+</button>
           </div>
         </div>
       </div>
@@ -540,7 +584,7 @@ include 'header.php';
 </div>
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
-
+<script src="js/script.js"></script>
      <br><br><br><br>
 
 

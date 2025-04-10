@@ -9,8 +9,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
 
   <style>
-    
-
+    /* Basic styles */
     .search-form {
       display: flex;
       gap: 20px;
@@ -83,6 +82,7 @@
       font-size: 16px;
       cursor: pointer;
       border-radius: 4px;
+      
     }
 
     .search-btn {
@@ -96,6 +96,48 @@
 
     .search-btn:hover {
       background: #1f3aa0;
+    }
+
+    /* Media Queries for Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .search-form {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+      }
+
+      .field {
+        width: 100%; /* Make each field take full width */
+      }
+
+      .guest-dropdown {
+        width: 100%; /* Full width on mobile */
+      }
+
+      .search-btn {
+        width: 100%; /* Make search button full width on mobile */
+      }
+    }
+
+    /* Media Queries for very small screens */
+    @media (max-width: 480px) {
+      .field label {
+        font-size: 12px; /* Smaller label text */
+      }
+
+      input, .guest-input, .search-btn {
+        padding: 8px 12px; /* Smaller padding for mobile */
+        font-size: 12px; /* Smaller font size */
+      }
+
+      .guest-dropdown {
+        width: 100%; /* Full width on smaller devices */
+        max-width: 320px; /* Limit max width */
+      }
+
+      .guest-input {
+        font-size: 12px; /* Smaller text */
+      }
     }
   </style>
 </head>
@@ -179,4 +221,5 @@
       }
     });
   </script>
-
+</body>
+</html>

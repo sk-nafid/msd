@@ -1,3 +1,4 @@
+// Initialize Flatpickr for From-To Date Range
 flatpickr("#date-range", {
   mode: "range",
   dateFormat: "d/m/Y"
