@@ -340,46 +340,7 @@ img.slide-height {
       color: #0d6efd !important; /* Hover color */
     }
 
-    /*qnt*/
-
-    .qnt{
-        border: solid white;
-    border-radius: 10px;
-    width: 196px;
-    height: 37px;
-    margin-top: 1px;
-    background-color: white;
-    text-align: center;
-    align-content: center;
-    }
-
-    .quantity-input {
-      display: flex;
-      align-items: center;
-    }
-    .quantity-input input {
-      text-align: center;
-      width: 60px;
-    }
-    .quantity-input button {
-        padding: 0.5rem;
-        border-radius: 23px;
-        height: 41px;
-        margin-left: 6px;
-    }
-     .quantity-input {
-      display: flex;
-      align-items: center;
-    }
-    .quantity-input input {
-      text-align: center;
-      width: 30px;
-      margin-left: 15px;
-      border: none;
-    }
-    .quantity-input button {
-      padding: 0.5rem;
-    }
+    
 
     .custbtn{
         border: none;
@@ -389,3 +350,6 @@ img.slide-height {
         font-weight: bold;
     color: white;
     }
+
+
+    

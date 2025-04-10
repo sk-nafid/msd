@@ -2,8 +2,100 @@
 <?php
 include 'header.php';
 ?>
+<style>
+    
+
+    .search-form {
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      align-items: center;
+      flex-wrap: nowrap; /* Ensures everything stays on one row */
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .field label {
+      margin-bottom: 5px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    input, .guest-input, .search-btn {
+      padding: 10px 14px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+      width: 220px;
+    }
+
+    .guest-input {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      background: white;
+    }
+
+    .guest-dropdown {
+      display: none;
+      position: absolute;
+      background: white;
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      z-index: 10;
+      width: 220px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 8px 0;
+    }
+
+    .row span {
+      flex: 1;
+    }
+
+    .row button {
+      background: #eee;
+      border: none;
+      padding: 4px 10px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .search-btn {
+      background: #2c4cc9;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+      width: auto; /* Adjust width for button */
+    }
+
+    .search-btn:hover {
+      background: #1f3aa0;
+    }
+  </style>
 
     <!-- Slider -->
+    
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -43,59 +135,53 @@ include 'header.php';
     </button>
     </div>
 
-
-
+<br><br>
 
 
     <!-- Search Section -->
-    <div class="container my-4">
-        <div class="p-4 bg-light rounded shadow">
-            <form class="row g-3">
-                <div class="col-md-3">
-                    <input type="text" class="form-control" placeholder="Destination">
-                </div>
-                <div class="col-md-3">
-                    <input type="date" class="form-control">
-                </div>
-                <div class="col-md-3">
-                    <input type="date" class="form-control">
-                </div>
-                <div class="col-md-2">
 
-                    <div class="dropdown nav-item" >
-                        <div class="nav-link dropdown-toggle qnt" href="#" id="dropdownMenuButton" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 
-                        <span id="adultSummary">0</span> Adult - <span id="childSummary">0</span> Child 
-                    </div>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-
-                            <div class="quantity-input">
-                       Adult  <a class="btn btn-outline-primary" type="button" id="adultDecreaseBtn" href="#" style="border-radius: 40px;height: 34px;margin-left: 13px;">-</a>
-                       <input type="number" class="" id="adultQuantity" value="0" min="0" readonly />
-                       <a class="btn btn-outline-primary" type="button" id="adultIncreaseBtn" href="#" style="border-radius: 40px;height: 36px; width:36px; margin-right: 20px;">+</a>
-                     </div>
-                     <br>
-                  
-
-                   <!-- Child Quantity Input -->
-                  
-
-                     
-                     <div class="quantity-input">
-                       Child <a class="btn btn-outline-primary" type="button" id="childDecreaseBtn" href="#" style="border-radius: 40px;height: 34px;margin-left: 13px;">-</a>
-                       <input type="number" class="" id="childQuantity" value="0" min="0" readonly />
-                       <a class="btn btn-outline-primary" type="button" id="childIncreaseBtn" href="#" style="border-radius: 40px;height: 36px; width:36px; margin-left: 4px;">+</a>
-                     </div>
-                        </ul>
-                    </div>
-
-                </div>
-                <div class="col-md-1">
-                    <button type="submit" class="btn btn-primary w-100">Search</button>
-                </div>
-            </form>
-        </div>
+    <div class="search-form">
+    <div class="field">
+      <label>Destination</label>
+      <input type="text" placeholder="Where are you going?" />
     </div>
+
+    <div class="field">
+      <label>When</label>
+      <input id="date-range" type="text" placeholder="Select dates" />
+    </div>
+
+    <div class="field">
+      <label>Guests</label>
+      <div class="guest-selector">
+        <div class="guest-input" onclick="toggleGuestDropdown()">
+          <span id="guestDisplay">0 Adult - 0 Child</span>
+          <span>&#x25BC;</span>
+        </div>
+        <div class="guest-dropdown" id="guestDropdown">
+          <div class="row">
+            <span>Adults</span>
+            <button onclick="updateGuests('adults', -1)">−</button>
+            <span id="adultCount">0</span>
+            <button onclick="updateGuests('adults', 1)">+</button>
+          </div>
+          <div class="row">
+            <span>Children</span>
+            <button onclick="updateGuests('children', -1)">−</button>
+            <span id="childCount">0</span>
+            <button onclick="updateGuests('children', 1)">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="field">
+      <label>&nbsp;</label>
+      <button class="search-btn">Search</button>
+    </div>
+  </div>
+    
 
     <!-- Featured Boxes -->
     <div class="container" data-aos="zoom-in-up">
@@ -452,7 +538,7 @@ include 'header.php';
 <input type="button" class="btn btn-primary" value="Hire a Car Now!" style="
     margin-top: 15px;float: right;">   
 </div>
-
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
 
      <br><br><br><br>
