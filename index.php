@@ -72,7 +72,7 @@ include 'header.php';
     }
 
     .row button {
-      background: #eee;
+      
       border: none;
       padding: 4px 10px;
       font-size: 16px;
@@ -579,8 +579,9 @@ include 'header.php';
 <br>
 <br>
 <div style="border-top: solid gray;width: auto;" class="container">
+    <a href="carrent.php">
 <input type="button" class="btn btn-primary" value="Hire a Car Now!" style="
-    margin-top: 15px;float: right;">   
+    margin-top: 15px;float: right;">   </a>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
